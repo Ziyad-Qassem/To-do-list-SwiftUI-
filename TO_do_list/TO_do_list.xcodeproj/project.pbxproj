@@ -22,6 +22,7 @@
 		DC0B631D2C843F3A0005F505 /* LoginViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B631C2C843F3A0005F505 /* LoginViewVM.swift */; };
 		DC0B631F2C843F460005F505 /* RegisterViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B631E2C843F460005F505 /* RegisterViewVM.swift */; };
 		DC0B63212C843F770005F505 /* ToDoTaskCellViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B63202C843F770005F505 /* ToDoTaskCellViewVM.swift */; };
+		DC0B63232C8444D70005F505 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0B63222C8444D70005F505 /* HeaderView.swift */; };
 		DC61598E2C842AC000F04C88 /* TO_do_listApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61598D2C842AC000F04C88 /* TO_do_listApp.swift */; };
 		DC6159902C842AC000F04C88 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC61598F2C842AC000F04C88 /* MainView.swift */; };
 		DC6159922C842AC300F04C88 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC6159912C842AC300F04C88 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		DC0B631C2C843F3A0005F505 /* LoginViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewVM.swift; sourceTree = "<group>"; };
 		DC0B631E2C843F460005F505 /* RegisterViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewVM.swift; sourceTree = "<group>"; };
 		DC0B63202C843F770005F505 /* ToDoTaskCellViewVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTaskCellViewVM.swift; sourceTree = "<group>"; };
+		DC0B63222C8444D70005F505 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		DC61598A2C842AC000F04C88 /* TO_do_list.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TO_do_list.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC61598D2C842AC000F04C88 /* TO_do_listApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TO_do_listApp.swift; sourceTree = "<group>"; };
 		DC61598F2C842AC000F04C88 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -133,13 +135,14 @@
 		DC6159A22C84384D00F04C88 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DC61598F2C842AC000F04C88 /* MainView.swift */,
 				DC0B63022C843D420005F505 /* profileView.swift */,
 				DC0B63042C843D6B0005F505 /* ToDoListItemsView.swift */,
 				DC0B63062C843D760005F505 /* NewTaskView.swift */,
 				DC0B63082C843D800005F505 /* LoginView.swift */,
+				DC61598F2C842AC000F04C88 /* MainView.swift */,
 				DC0B630A2C843D8F0005F505 /* RegisterView.swift */,
 				DC0B630E2C843DD90005F505 /* ToDoTaskCellView.swift */,
+				DC0B63222C8444D70005F505 /* HeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC0B63092C843D800005F505 /* LoginView.swift in Sources */,
+				DC0B63232C8444D70005F505 /* HeaderView.swift in Sources */,
 				DC6159902C842AC000F04C88 /* MainView.swift in Sources */,
 				DC0B631F2C843F460005F505 /* RegisterViewVM.swift in Sources */,
 				DC0B63052C843D6B0005F505 /* ToDoListItemsView.swift in Sources */,
