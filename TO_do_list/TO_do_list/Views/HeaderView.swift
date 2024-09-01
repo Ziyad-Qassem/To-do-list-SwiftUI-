@@ -28,7 +28,7 @@ struct HeaderView: View {
                     .font(.system(size: 25))
                     .foregroundStyle(.white)
             }
-            .padding(.top, 40)
+            .padding(.top, 70)
         }.frame(width: UIScreen.main.bounds.width * 3 , height:  300)
             .offset(y: -105)
             
