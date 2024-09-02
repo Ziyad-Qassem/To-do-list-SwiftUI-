@@ -22,27 +22,16 @@ struct LoginView: View {
                 Form{
                     TextField("Email Address", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.none)
                     SecureField("password", text: $email)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
+                        .autocorrectionDisabled()
 
-                    Button(action: {
-                        // login code
-                    }, label: {
-                        ZStack{
-                            RoundedRectangle(cornerRadius: 10)
-                                .foregroundColor(.blue)
-                            
-                            Button(action: {
-                                // login code
-                            }, label: {
-                                Text("Log In")
-                                    .foregroundStyle(.white)
-                                    .bold()
-                            })
-                        }
-                    })
-                }.padding()
+                    TDLButton(title: "Log In", buttonColor: .blue) {
+                        // Action
+                    }
+                }
                 
                 // create Account
                 

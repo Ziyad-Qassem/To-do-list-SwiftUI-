@@ -18,33 +18,24 @@ struct RegisterView: View {
             HeaderView(title: "Register", subtitle: "Start organizing your life ", angel: -20, backgoundColor: .orange)
             
             // registration form
-            ZStack {
+            
               
                 Form {
                     TextField("Your Name", text: $userName)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.none)
                     TextField("Your Email", text: $userEmail)
+                        .autocorrectionDisabled()
+                        .textInputAutocapitalization(.none)
                     SecureField("Create Passwrod", text: $userPassword)
+                     
+
+                    TDLButton(title: "Create Account", buttonColor: .green) {
+                        // Action
+                    }
                     
-                    Button(action: {
-                        // registration code
-                    }, label: {
-                        ZStack {
-                            RoundedRectangle(cornerRadius: 10 )
-                                .foregroundColor(.green)
-                            
-                            Text("Create Account")
-                                .foregroundStyle(.white)
-                                .bold()
-                                
-                        }
-                    })
-                }
-            }
-           
-            
-            
-            
-            
+                }.offset(y: -30)
+     
             Spacer()
         }
     }
