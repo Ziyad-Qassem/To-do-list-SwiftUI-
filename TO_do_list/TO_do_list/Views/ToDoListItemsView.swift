@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ToDoListItemsView: View {
     @StateObject var viewModel  = ToDoListViewViewModel()
+    @State private var newtaskpressed : Bool = false
     private  let userId  : String
     init (userId : String) {
         self.userId = userId
@@ -23,10 +24,15 @@ struct ToDoListItemsView: View {
             .toolbar{
                 Button(action: {
                     // go to  new task view to add a new to do task
+                    newtaskpressed = true
+                    
                 }, label: {
                     Image(systemName: "plus")
                 })
             }
+            .sheet(isPresented: $newtaskpressed, content: {
+                NewItemView( newItemAdded: $newtaskpressed)
+            })
         }
     }
 }

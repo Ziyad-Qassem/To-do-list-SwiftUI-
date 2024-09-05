@@ -6,3 +6,17 @@
 //
 
 import Foundation
+
+struct ToDoTask : Codable  , Identifiable {
+    let id : String
+    let title : String
+    let description : String
+    let dueDate : TimeInterval
+    let createDate : TimeInterval
+    var isDone : Bool
+    
+    mutating func isTaskDone(_ state : Bool) {
+        isDone = state
+    }
+    
+}
