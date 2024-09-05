@@ -13,7 +13,18 @@ struct MainView: View {
         if viewModle.isSignedIn , !viewModle.currentUserId.isEmpty {
             // user already signed in
             
-            ToDoListItemsView()
+           
+            TabView{
+                ToDoListItemsView(userId: viewModle.currentUserId)
+                    .tabItem {
+                        Label("Home", systemImage: "house")
+                    }
+                
+                profileView()
+                    .tabItem {
+                        Label("Profile", systemImage: "person.circle")
+                    }
+            }
         }
         else {
             
