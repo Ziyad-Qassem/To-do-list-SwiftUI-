@@ -10,4 +10,7 @@ class ToDoTaskCellViewViewModel : ObservableObject {
     init () {
         
     }
+    func toggleTaskCheckMark() {
+        
+    }
 }

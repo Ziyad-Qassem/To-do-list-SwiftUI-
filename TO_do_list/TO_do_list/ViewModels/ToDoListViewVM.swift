@@ -12,4 +12,9 @@ class ToDoListViewViewModel : ObservableObject {
     }
     
     
+    func deleteTask(taskId : String) {
+        
+    }
+    
+    
 }

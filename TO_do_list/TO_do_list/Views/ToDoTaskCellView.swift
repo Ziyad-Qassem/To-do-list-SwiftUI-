@@ -9,11 +9,31 @@ import SwiftUI
 
 struct ToDoCellView: View {
     @StateObject var viewModel = ToDoTaskCellViewViewModel()
+    let toDoTask : ToDoTask
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            VStack(alignment: .leading){
+                Text(toDoTask.title)
+                    .font(.body)
+        
+                Text("\(Date(timeIntervalSince1970: toDoTask.dueDate).formatted(date: .abbreviated, time: .shortened))")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                
+            }
+            Spacer()
+            
+            Button{
+                // change task isDone value
+                
+                viewModel.toggleTaskCheckMark()
+            }label: {
+                Image(systemName:  toDoTask.isDone ? "checkmark.circle.fill" : "circle")
+            }
+        }
     }
 }
 
 #Preview {
-    ToDoCellView()
+    ToDoCellView(toDoTask: ToDoTask(id: "", title: "", description: "", dueDate: Date().timeIntervalSince1970, createDate: Date().timeIntervalSince1970, isDone: false))
 }
