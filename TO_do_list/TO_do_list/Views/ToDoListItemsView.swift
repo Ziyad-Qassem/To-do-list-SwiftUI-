@@ -8,7 +8,7 @@
 import SwiftUI
 import FirebaseFirestore
 struct ToDoListItemsView: View {
-    @StateObject var viewModel  = ToDoListViewViewModel()
+    @StateObject var viewModel  : ToDoListViewViewModel
     
     @FirestoreQuery var toDoTasks : [ToDoTask]
     @State private var newtaskpressed : Bool = false
@@ -16,6 +16,7 @@ struct ToDoListItemsView: View {
     init (userId : String) {
        
         self._toDoTasks = FirestoreQuery(collectionPath: "Users/\(userId)/Tasks")
+        self._viewModel = StateObject(wrappedValue: ToDoListViewViewModel(userId: userId))
     }
     
     var body: some View {
@@ -30,7 +31,7 @@ struct ToDoListItemsView: View {
                             }label: {
                                 Text("Delete")
                                     
-                            }.foregroundStyle(.red)
+                            }.tint(.red)
                         }
                     
                 }
