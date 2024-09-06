@@ -26,9 +26,10 @@ struct ToDoCellView: View {
             Button{
                 // change task isDone value
                 
-                viewModel.toggleTaskCheckMark()
+                viewModel.toggleTaskCheckMark(toDoTask: toDoTask)
             }label: {
                 Image(systemName:  toDoTask.isDone ? "checkmark.circle.fill" : "circle")
+                    .foregroundStyle(Color(.blue))
             }
         }
     }
