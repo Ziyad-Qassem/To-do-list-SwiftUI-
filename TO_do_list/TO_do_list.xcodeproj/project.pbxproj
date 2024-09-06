@@ -31,7 +31,7 @@
 		DC61599F2C8437A200F04C88 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DC61599E2C8437A200F04C88 /* FirebaseAuth */; };
 		DC6159A12C8437A200F04C88 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = DC6159A02C8437A200F04C88 /* FirebaseFirestore */; };
 		DCD0C9D92C8597BD0037059C /* TDLButton .swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0C9D82C8597BD0037059C /* TDLButton .swift */; };
-		DCD0C9DB2C899CDE0037059C /* extensionToEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0C9DA2C899CDE0037059C /* extensionToEncodable.swift */; };
+		DCD0C9DB2C899CDE0037059C /* toDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD0C9DA2C899CDE0037059C /* toDictionary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +58,7 @@
 		DC6159942C842AC300F04C88 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DC61599C2C842FD600F04C88 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DCD0C9D82C8597BD0037059C /* TDLButton .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TDLButton .swift"; sourceTree = "<group>"; };
-		DCD0C9DA2C899CDE0037059C /* extensionToEncodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensionToEncodable.swift; sourceTree = "<group>"; };
+		DCD0C9DA2C899CDE0037059C /* toDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = toDictionary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				DC61599C2C842FD600F04C88 /* GoogleService-Info.plist */,
-				DCD0C9DA2C899CDE0037059C /* extensionToEncodable.swift */,
+				DCD0C9DA2C899CDE0037059C /* toDictionary.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -264,7 +264,7 @@
 				DC0B63172C843F070005F505 /* ProfileViewVM.swift in Sources */,
 				DC61598E2C842AC000F04C88 /* TO_do_listApp.swift in Sources */,
 				DC0B63112C843E6E0005F505 /* UserModel.swift in Sources */,
-				DCD0C9DB2C899CDE0037059C /* extensionToEncodable.swift in Sources */,
+				DCD0C9DB2C899CDE0037059C /* toDictionary.swift in Sources */,
 				DC0B63132C843E920005F505 /* ToDoTaskModel.swift in Sources */,
 				DC0B631D2C843F3A0005F505 /* LoginViewVM.swift in Sources */,
 				DC0B631B2C843F310005F505 /* NewTaskViewVM.swift in Sources */,
