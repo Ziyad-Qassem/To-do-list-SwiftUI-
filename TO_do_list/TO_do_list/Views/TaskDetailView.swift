@@ -9,9 +9,11 @@ import SwiftUI
 
 struct TaskDetailView: View {
     @State var editingTask : Bool = false
+    @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel : TaskDetailsViewViewModel
-    init (taskId : String){
+    init (taskId : String  ){
         self._viewModel = StateObject(wrappedValue: TaskDetailsViewViewModel(taskId: taskId))
+       
     }
     var body: some View {
         VStack(alignment: .leading){
@@ -53,6 +55,7 @@ struct TaskDetailView: View {
                     TDLButton(title: "Save", buttonColor: .red) {
                         // save made edits
                         viewModel.saveChanges()
+                        presentationMode.wrappedValue.dismiss() 
                         
                     }
                 }
@@ -90,7 +93,7 @@ struct TaskDetailView: View {
         .onAppear{
             viewModel.FetchTaskDetails()
         }
-        .padding(.top , 70)
+        .padding(.top , 40)
             .padding()
         Spacer()
     }

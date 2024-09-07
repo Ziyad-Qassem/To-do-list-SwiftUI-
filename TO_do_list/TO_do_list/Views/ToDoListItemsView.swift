@@ -12,7 +12,8 @@ struct ToDoListItemsView: View {
     @State private var taskCellPressed : Bool = false
     @FirestoreQuery var toDoTasks : [ToDoTask]
     @State private var newtaskpressed : Bool = false
- 
+    
+    
     init (userId : String) {
        
         self._toDoTasks = FirestoreQuery(collectionPath: "Users/\(userId)/Tasks")
@@ -23,6 +24,7 @@ struct ToDoListItemsView: View {
         NavigationStack {
             VStack {
                 List(toDoTasks){ item in
+                   
                    ToDoCellView(toDoTask: item)
                         .swipeActions{
                             Button {
@@ -33,6 +35,13 @@ struct ToDoListItemsView: View {
                                     
                             }.tint(.red)
                         }
+                        .onTapGesture {
+                                    // pressed cell to get details
+                            taskCellPressed = true
+                            viewModel.setTaskId(taskId: item.id)
+                            }
+                    
+                   
                     
                 }
             }
@@ -49,6 +58,10 @@ struct ToDoListItemsView: View {
             .sheet(isPresented: $newtaskpressed, content: {
                 // open new task view
                 NewItemView( newItemAdded: $newtaskpressed)
+            }) 
+            .sheet(isPresented: $taskCellPressed, content: {
+                // open  task details view
+                TaskDetailView(taskId: viewModel.getTaskId())
             })
            
         }
