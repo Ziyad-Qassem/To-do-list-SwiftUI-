@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseFirestore
 struct ToDoListItemsView: View {
     @StateObject var viewModel  : ToDoListViewViewModel
-    
+    @State private var taskCellPressed : Bool = false
     @FirestoreQuery var toDoTasks : [ToDoTask]
     @State private var newtaskpressed : Bool = false
  
@@ -47,8 +47,10 @@ struct ToDoListItemsView: View {
                 })
             }
             .sheet(isPresented: $newtaskpressed, content: {
+                // open new task view
                 NewItemView( newItemAdded: $newtaskpressed)
             })
+           
         }
     }
 }
